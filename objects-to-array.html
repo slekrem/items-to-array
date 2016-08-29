@@ -1,0 +1,62 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="array-item.html">
+
+<!--
+`objects-to-array`
+
+
+@demo demo/index.html
+-->
+
+<dom-module id="objects-to-array">
+    <template>
+        <style>
+            :host {
+                display: block;
+            }
+        </style>
+
+        <div>
+            <content select="array-item"></content>
+        </div>
+
+    </template>
+
+    <script>
+        Polymer({
+            is: 'objects-to-array',
+
+            properties: {
+                log: {
+                    type: Boolean,
+                    value: false
+                },
+
+                array: {
+                    type: Array
+                }
+            },
+
+            ready: function() {
+                var items = this.querySelectorAll("array-item");
+                var array = [];
+                items.forEach(function(item) {
+                    var value = item.getAttribute("value");
+                    var arrayItem = undefined;
+
+                    if(item.hasAttribute("is-json")) {
+                        arrayItem = JSON.parse(value);
+                    }
+                    array.push(arrayItem);
+                });
+
+                if(this.log) {
+                    console.log(items);
+                    console.log(array);
+                }
+
+                this.array = array;
+            },
+        });
+    </script>
+</dom-module>

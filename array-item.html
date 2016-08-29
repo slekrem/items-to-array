@@ -1,0 +1,45 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`array-item`
+
+
+@demo demo/index.html
+-->
+
+<dom-module id="array-item">
+    <template>
+        <style>
+            :host {
+                display: block;
+            }
+        </style>
+
+    </template>
+
+    <script>
+        Polymer({
+            is: 'array-item',
+
+            properties: {
+                value: String,
+
+                log: {
+                    type: Boolean,
+                    value: false
+                },
+
+                isJson: {
+                    type: Boolean,
+                    value: false
+                }
+            },
+
+            ready: function() {
+                if(this.log) {
+                    console.log(this.value);
+                }
+            },
+        });
+    </script>
+</dom-module>

@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>objects-to-array test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+
+    <link rel="import" href="../objects-to-array.html">
+</head>
+
+<body>
+
+    <test-fixture id="basic">
+        <template>
+            <objects-to-array></objects-to-array>
+        </template>
+    </test-fixture>
+
+    <script>
+        suite('objects-to-array', function() {
+
+            test('instantiating the element works', function() {
+                var element = fixture('basic');
+                assert.equal(element.is, 'objects-to-array');
+            });
+
+        });
+    </script>
+</body>
+
+</html>
