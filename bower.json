@@ -1,8 +1,8 @@
 {
-  "name": "objects-to-array",
-  "main": "objects-to-array.html",
+  "name": "items-to-array",
+  "main": "items-to-array.html",
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.4.0"
+    "polymer": "Polymer/polymer#^1.4.0",
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",

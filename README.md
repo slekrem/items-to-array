@@ -1,4 +1,4 @@
-# \<objects-to-array\>
+# \<items-to-array\>
 
 
 
